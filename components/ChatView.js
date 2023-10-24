@@ -93,8 +93,7 @@ const styles = StyleSheet.create({
 		borderRadius: 5,
 		justifyContent: "center",
 		alignItems: "center",
-		marginLeft: 5, // hinzugefügt, um etwas Abstand zwischen den Buttons zu haben
-		marginRight: 5, // hinzugefügt, um etwas Abstand zwischen den Buttons zu haben
+		marginLeft: 5, 
 	},
 	text: {
 		color: "#fff",

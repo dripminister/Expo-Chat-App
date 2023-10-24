@@ -24,7 +24,7 @@ export default function ChatScreen() {
 		const messagesCollection = collection(db, "messages")
 		const orderedCollection = query(
 			messagesCollection,
-			orderBy("timestamp", "asc") // 'desc' für absteigende Sortierung
+			orderBy("timestamp", "asc")
 		)
 		const unsubscribe = onSnapshot(orderedCollection, (snapshot) => {
 			const newMessages = snapshot.docs.map((doc) => ({
@@ -45,19 +45,16 @@ export default function ChatScreen() {
 const uploadImage = async () => {
 	try {
 		console.log("Uploading image...")
-		const response = await fetch(image) // Angenommen, `image` ist die URI Ihres Bildes
+		const response = await fetch(image)
 
 		const blob = await response.blob()
 
-		const imageRef = ref(storage, "images/" + new Date().toISOString()) // Erstellen eines eindeutigen Namens basierend auf dem aktuellen Zeitstempel
+		const imageRef = ref(storage, "images/" + new Date().toISOString())
 
-		// Hochladen des Blobs
 		await uploadBytes(imageRef, blob)
 
-		// URL des hochgeladenen Bildes abrufen
 		const url = await getDownloadURL(imageRef)
 
-		// Neues Dokument in der Firestore-Datenbank erstellen
 		await addDoc(collection(db, "messages"), {
 			image: url,
 			timestamp: Timestamp.now(),

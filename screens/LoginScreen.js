@@ -54,14 +54,14 @@ const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: "center",
 		padding: 20,
-		backgroundColor: "#f9f9f9", // Hintergrundfarbe ändern
+		backgroundColor: "#f9f9f9",
 	},
 	header: {
 		fontSize: 24,
 		fontWeight: "bold",
-		marginBottom: 20, // Abstand zwischen der Überschrift und dem nächsten Element
-		color: "#333", // Textfarbe
-		textAlign: "center", // Text zentrieren
+		marginBottom: 20, 
+		color: "#333",
+		textAlign: "center",
 	},
 	input: {
 		height: 40,
@@ -69,16 +69,16 @@ const styles = StyleSheet.create({
 		borderWidth: 1,
 		marginBottom: 12,
 		paddingLeft: 8,
-		borderRadius: 5, // Ränder abrunden
+		borderRadius: 5,
 	},
 	button: {
 		backgroundColor: "#2196F3",
 		padding: 10,
 		borderRadius: 5,
-		marginTop: 10, // Abstand zwischen den Buttons
+		marginTop: 10,
 		justifyContent: "center",
 		alignItems: "center",
-		width: "100%", // Damit der Button die volle Breite einnimmt
+		width: "100%",
 	},
 	text: {
 		color: "#fff",
